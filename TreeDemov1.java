@@ -150,20 +150,28 @@ class Node{
 	  
 	  
 	  
-	   /*
-	   a method to find the node in the tree
-	   with a largest key
-	   */
+	   /**
+	     * Finds the node with the largest value in the binary search tree.
+	     * @param root The root of the subtree to search in.
+	     * @return The largest value in the tree.
+	     */
 	   public int getMax(Node root){
-         //implement in here
+      //implement in here
+		   if(root.right == null) {
+			   return root.value;
+		   }else {
+			   return getMax(root.right);
+		   }
 	   }
 	   
 	   
 	   
-	   /*
-	   this method will not compile until getMax
-	   is implemented
-	   */
+	  /**
+     * Deletes a node with a specific value from the binary search tree.
+     * @param root The root of the subtree to delete from.
+     * @param key The value of the node to be deleted.
+     * @return The root of the modified subtree after deletion.
+     */
 	   public Node delete(Node root, int key){
 	      
 	      if(root == null){
