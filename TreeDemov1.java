@@ -1,4 +1,8 @@
 class Node{
+	/**
+     * Constructor to initialize a Node with a given value.
+     * @param value The value of the node.
+     */
 	   int value;
 	   Node left, right;
 	   
@@ -19,8 +23,9 @@ class Node{
 	   recursive insert method
 		
 	   */
-	   /*
+	   /**
 	   inserts a node into the tree
+	    @param value The value to be inserted into the tree.
 	   */
 	   public void insert(int value){
 	      //tree is empty
@@ -53,14 +58,20 @@ class Node{
 	      }//closing main if-else 
 	   }
 	   
-	   /*
-	   pre-order traversal
-	   Prints the value of every node preorder
-	   */
+	   /**
+	     * Performs pre-order traversal of the binary search tree.
+	     * Prints the value of every node in preorder.
+	     * @param root The root of the subtree to be traversed.
+	     */
 	   public void preOrderTraversal(Node root){
-		//implement in here
-		   
+		
+		   if (root != null) {
+	            System.out.print(root.value + " ");
+	            preOrderTraversal(root.left);
+	            preOrderTraversal(root.right);
+	        }
 	   }
+
 
 	   
 	   
