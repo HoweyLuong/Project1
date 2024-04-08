@@ -91,12 +91,18 @@ class Node{
 	   
 	   
 	   
-	   /*
-	   post-order traversal
-	   */
+	   /**
+	     * Performs post-order traversal of the binary search tree.
+	     * @param root The root of the subtree to be traversed.
+	     */
 	  
 	   public void postOrderTraversal(Node root){
-         //implement in here
+   
+		   if (root != null) {
+			   postOrderTraversal(root.left);
+			   postOrderTraversal(root.right);
+			   System.out.print(root.value + " ");
+		   }
 		   
 	   }
 	   
